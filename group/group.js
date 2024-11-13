@@ -1,5 +1,9 @@
 import { createGroup, getAllGroup } from "../axios/groupService.js";
-import { animatedProgressBar } from "../function.js";
+import {
+  animatedProgressBar,
+  syncFileDataGroup,
+  writeFileSyncGroup,
+} from "../function.js";
 
 const groups = await getAllGroup();
 
@@ -9,8 +13,10 @@ for (const group of groups) {
   const payload = {
     name: group?.name,
   };
-  await createGroup(payload, true);
+  const result = await createGroup(payload, true);
+  syncFileDataGroup(group?.id, result?.id);
   i += 1;
   animatedProgressBar(i, groups);
 }
 console.log("\nĐã đồng bộ hết tính năng");
+writeFileSyncGroup(groups);

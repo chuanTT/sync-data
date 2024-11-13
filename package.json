@@ -11,7 +11,11 @@
     "group": "node ./group/group.js",
     "rmgroup": "node ./group/remove_all_group.js",
     "category": "node ./category/category.js",
-    "rmcategory": "node ./category/remove_all_category.js"
+    "rmcategory": "node ./category/remove_all_category.js",
+    "post": "node ./post/post.js",
+    "rmpost": "node ./post/remove_all_post.js",
+    "basic": "npm run auth && npm run product && npm run group && npm run category && npm run post",
+    "rmbasic": "npm run auth && npm run rmproduct && npm run rmgroup && npm run rmcategory && npm run rmpost"
   },
   "keywords": [],
   "author": "",
