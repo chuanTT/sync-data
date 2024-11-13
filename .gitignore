@@ -1,0 +1,18 @@
+# Bỏ qua các thư mục node_modules
+node_modules/
+
+# Bỏ qua các file tạm thời
+*.log
+*.tmp
+
+# Bỏ qua các file cấu hình IDE
+.vscode/
+.idea/
+
+# Bỏ qua các file môi trường
+.env
+.env.local
+
+# Bỏ qua các thư mục build
+dist/
+build/
