@@ -74,3 +74,5 @@ export const writeFileSyncGroup = (payload) =>
 
 export const writeFileSyncPost = (payload) =>
   fs.writeFileSync(pathDataPost, JSON.stringify(payload));
+
+export const readSyncDataPost = () => JSON.parse(fs.readFileSync(pathDataPost, "utf8"));
